@@ -8,7 +8,7 @@ return require("packer").startup(function(use)
 
 	-- theme
 	use({ "catppuccin/nvim", as = "catppuccin" }) -- theme of choice
-	use({ "rose-pine/neovim", as = "rose-pine" }) -- not really sure which light theme I like
+	use({ "projekt0n/github-nvim-theme", as = "github-theme" }) -- not really sure which light theme I like
 	use({ "cormacrelf/dark-notify" }) -- sync light/dark mode with the OS
 
 	-- required for most plugins
