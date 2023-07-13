@@ -1,0 +1,23 @@
+# ignore everything by default
+**/**
+
+# but not these files...
+!.gitignore
+!LICENCE
+!README.md
+
+# ...and these ...
+!.config/
+!.config/starship.toml
+!.config/fish
+!.config/fish/**
+!.config/nvim
+!.config/nvim/**
+!.config/wezterm
+!.config/wezterm/**
+!.setup
+.setup/**
+
+**/.DS_Store
+!**/**/.gitkeep
+!**/**/.gitignore

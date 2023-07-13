@@ -1,0 +1,6 @@
+# PHP artisan
+alias artisan='php artisan'
+
+# Edit your evil master project
+alias ..evil = 'cd ~/Projects/Evil && vim && cd ~'
+
