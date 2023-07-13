@@ -17,7 +17,7 @@ config.colors = {
 }
 
 -- Change the colorscheme
-config.color_scheme = "TokyoNight"
+config.color_scheme = "Tokyo Night Moon"
 
 -- Make the window perfect
 config.enable_tab_bar = false
