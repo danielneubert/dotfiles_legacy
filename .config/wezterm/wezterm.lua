@@ -23,6 +23,7 @@ config.color_scheme = "Catppuccin Macchiato"
 config.enable_tab_bar = false
 config.window_background_opacity = 0.85
 config.macos_window_background_blur = 32
+config.exit_behavior = "CloseOnCleanExit"
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -33,6 +34,7 @@ config.window_padding = {
 -- Change the font to something workable
 config.font = wezterm.font("Iosevka Nerd Font Mono", { weight = "Medium" })
 config.font_size = 18
+config.line_height = 1.3
 
 -- Say that this macOS app works as a macOS app ...
 config.native_macos_fullscreen_mode = true
@@ -63,6 +65,11 @@ config.keys = {
 		key = "f",
 		mods = "CMD|CTRL",
 		action = wezterm.action.ToggleFullScreen,
+	},
+	{
+		key = "q",
+		mods = "CMD",
+		action = wezterm.action.CloseCurrentTab({ confirm = true }),
 	},
 	{
 		key = "s",
