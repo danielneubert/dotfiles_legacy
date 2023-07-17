@@ -15,6 +15,10 @@
 !.config/nvim/**
 !.config/wezterm
 !.config/wezterm/**
+!.config/karabiner
+!.config/karabiner/assets
+!.config/karabiner/assets/complex_modifications
+!.config/karabiner/assets/complex_modifications/**
 !.setup
 .setup/**
 
