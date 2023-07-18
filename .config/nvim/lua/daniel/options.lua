@@ -38,7 +38,7 @@ vim.opt.splitright = true
 -- Color Setup
 vim.opt.termguicolors = true
 
--- PHP word seperation
+-- PHP word seperation to select $this
 vim.opt.iskeyword:append("$")
 
 -- Highlight invisible chars
