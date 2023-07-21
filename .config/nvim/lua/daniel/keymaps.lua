@@ -54,12 +54,20 @@ vim.keymap.set("n", "<M-j>", "<C-w>j") -- move cursor next split
 vim.keymap.set("n", "<M-k>", "<C-w>k") -- move cursor prev split
 
 --------------------
--- Tabs
+-- Buffer (Plugin: BarBar)
 --------------------
-vim.keymap.set("n", "<M-T>", "<cmd>tabnew<cr>") -- create new tab
-vim.keymap.set("n", "<M-W>", "<cmd>tabclose<cr>") -- close current tab
-vim.keymap.set("n", "<M-L>", "<cmd>tabn<cr>") -- go to next tab
-vim.keymap.set("n", "<M-H>", "<cmd>tabp<cr>") -- go to previous tab
+vim.keymap.set("n", "<C-l>", "<cmd>BufferPrevious<cr>")
+vim.keymap.set("n", "<C-l>", "<cmd>BufferNext<cr>")
+vim.keymap.set("n", "<C-1>", "<cmd>BufferGoto 1<cr>")
+vim.keymap.set("n", "<C-2>", "<cmd>BufferGoto 2<cr>")
+vim.keymap.set("n", "<C-3>", "<cmd>BufferGoto 3<cr>")
+vim.keymap.set("n", "<C-4>", "<cmd>BufferGoto 4<cr>")
+vim.keymap.set("n", "<C-5>", "<cmd>BufferGoto 5<cr>")
+vim.keymap.set("n", "<C-6>", "<cmd>BufferGoto 6<cr>")
+vim.keymap.set("n", "<C-7>", "<cmd>BufferGoto 7<cr>")
+vim.keymap.set("n", "<C-8>", "<cmd>BufferGoto 8<cr>")
+vim.keymap.set("n", "<C-9>", "<cmd>BufferGoto 9<cr>")
+vim.keymap.set("n", "<C-w>", "<cmd>BufferClose<cr>")
 
 --------------------
 -- Plugin: NvimTree

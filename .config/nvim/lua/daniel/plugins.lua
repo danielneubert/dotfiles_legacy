@@ -7,9 +7,8 @@ return require("packer").startup(function(use)
 	use({ "wbthomason/packer.nvim" })
 
 	-- theme
-	use({ "catppuccin/nvim", as = "catppuccin" }) -- theme of choice
-	use({ "projekt0n/github-nvim-theme", as = "github-theme" }) -- not really sure which light theme I like
-	use({ "cormacrelf/dark-notify" }) -- sync light/dark mode with the OS
+	use({ "rose-pine/neovim", as = "rose-pine" })
+	use({ "projekt0n/github-nvim-theme", as = "github-theme" })
 
 	-- required for most plugins
 	use({ "nvim-lua/plenary.nvim" })
@@ -20,17 +19,10 @@ return require("packer").startup(function(use)
 	-- filetree sidebar
 	use({ "nvim-tree/nvim-tree.lua" })
 
-	-- startup tracker
-	use({ "dstein64/vim-startuptime" })
-
 	-- fuzzy finder for files
 	-- use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 	use({ "camspiers/snap" })
-
-	-- auto closing
-	use({ "windwp/nvim-autopairs" }) -- autoclose parens, brackets, quotes, etc...
-	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
 	-- treesitter (syntax highlighting)
 	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
@@ -65,4 +57,7 @@ return require("packer").startup(function(use)
 
 	-- terminal
 	use({ "akinsho/toggleterm.nvim", tag = "*" })
+
+	-- Something new to play with
+	use({ "romgrk/barbar.nvim" })
 end)

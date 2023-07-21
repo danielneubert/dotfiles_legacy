@@ -17,11 +17,11 @@ config.colors = {
 }
 
 -- Change the colorscheme
-config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = "Rosé Pine Moon (Gogh)"
 
 -- Make the window perfect
 config.enable_tab_bar = false
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 32
 config.exit_behavior = "CloseOnCleanExit"
 config.window_padding = {
@@ -79,7 +79,7 @@ config.keys = {
 	{
 		key = "l",
 		mods = "CMD",
-		action = wezterm.action.SendKey({ key = "l", mods = "CTRL" }),
+		action = wezterm.action.SendKey({ key = "p", mods = "CTRL" }),
 	},
 	{
 		key = "t",

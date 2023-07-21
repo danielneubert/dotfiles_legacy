@@ -4,6 +4,10 @@ vim.opt.guicursor = ""
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "100"
 
+-- Window Title
+vim.opt.title = true
+vim.opt.titlestring = "vim %{substitute(getcwd(), $HOME, '~', '')}"
+
 -- Numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -44,3 +48,11 @@ vim.opt.iskeyword:append("$")
 -- Highlight invisible chars
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
+
+vim.g.php_cs_fixer_rules = "@PSR2" -- options: --rules (default:@PSR2)
+vim.g.php_cs_fixer_cache = ".php_cs.cache" -- options: --cache-file
+vim.g.php_cs_fixer_config_file = ".php_cs" -- options: --config
+vim.g.php_cs_fixer_allow_risky = "yes" -- options: --allow-risky
+
+-- Disable BarBar Auto Setup (don't ask me why)
+vim.g.barbar_auto_setup = false
