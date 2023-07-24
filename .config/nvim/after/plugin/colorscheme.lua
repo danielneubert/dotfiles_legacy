@@ -17,7 +17,7 @@ function Rose()
 	})
 
 	vim.cmd.colorscheme("rose-pine")
-	vim.api.nvim_set_hl(0, "NonText", { fg = "#393552" })
+	vim.api.nvim_set_hl(0, "NonText", { fg = "#44415a" })
 
 	print("Theme: Rose Pine Moon")
 end
@@ -38,7 +38,7 @@ function RoseDawn()
 	})
 
 	vim.cmd.colorscheme("rose-pine")
-	vim.api.nvim_set_hl(0, "NonText", { fg = "#393552" })
+	vim.api.nvim_set_hl(0, "NonText", { fg = "#dfdad9" })
 	print("Theme: Rose Pine Dawn")
 end
 

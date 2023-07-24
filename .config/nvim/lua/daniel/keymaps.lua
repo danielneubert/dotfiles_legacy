@@ -40,6 +40,9 @@ vim.keymap.set({ "n", "v" }, "<C-s>", function()
 	vim.cmd("w")
 end)
 
+-- enable <CMD-C> to copy the selection to the system clipboard via wezterm
+vim.keymap.set("v", "<C-c>", '"*y') -- split vertical
+
 --------------------
 -- Split
 --------------------
@@ -54,9 +57,9 @@ vim.keymap.set("n", "<M-j>", "<C-w>j") -- move cursor next split
 vim.keymap.set("n", "<M-k>", "<C-w>k") -- move cursor prev split
 
 --------------------
--- Buffer (Plugin: BarBar)
+-- Buffers (Plugin: BarBar)
 --------------------
-vim.keymap.set("n", "<C-l>", "<cmd>BufferPrevious<cr>")
+vim.keymap.set("n", "<C-h>", "<cmd>BufferPrevious<cr>")
 vim.keymap.set("n", "<C-l>", "<cmd>BufferNext<cr>")
 vim.keymap.set("n", "<C-1>", "<cmd>BufferGoto 1<cr>")
 vim.keymap.set("n", "<C-2>", "<cmd>BufferGoto 2<cr>")
