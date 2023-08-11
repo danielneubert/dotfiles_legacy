@@ -32,7 +32,7 @@ barbar.setup({
 	maximum_length = 40,
 	minimum_length = 0,
 	sidebar_filetypes = {
-		NvimTree = true,
+		-- NvimTree = true,
 	},
 	no_name_title = "[No Name]",
 })

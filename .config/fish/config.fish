@@ -14,9 +14,13 @@ for config_file in (find $HOME/.config/fish/configs -path "*/*.fish" -depth 1 -t
     builtin source $config_file 2> /dev/null
 end
 
+if status is-interactive
+and not set -q TMUX
+    exec tmux
+end
+
 # Remove the fish greeting
 set fish_greeting
 
 # Set the shell prompt
 starship init fish | source
-

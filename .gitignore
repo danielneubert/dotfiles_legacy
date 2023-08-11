@@ -3,6 +3,7 @@
 
 # but not these files...
 !.gitignore
+!.zshrc
 !LICENCE
 !README.md
 

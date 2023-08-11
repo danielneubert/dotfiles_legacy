@@ -8,6 +8,10 @@ return require("packer").startup(function(use)
 
 	-- theme
 	use({ "rose-pine/neovim", as = "rose-pine" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "folke/tokyonight.nvim", as = "tokyonight" })
+	use({ "EdenEast/nightfox.nvim" })
+	use({ "Tsuzat/NeoSolarized.nvim" })
 	use({ "projekt0n/github-nvim-theme", as = "github-theme" })
 
 	-- required for most plugins

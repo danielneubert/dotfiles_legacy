@@ -11,7 +11,7 @@ function bup
     printf "%b" "$COLOR_YELLOW\e0🍻  Running the cleanup ...\n$COLOR_RESET"
     brew autoremove
     brew cleanup
-    printf "%b" "$COLOR_GREEN\e0🍻  \uf00c Done! Do something amazing <3\n$COLOR_RESET"
+    printf "%b" "$COLOR_GREEN\e0🍻  \u2714 Done! Do something amazing \u2764\n$COLOR_RESET"
 end
 
 # Alias to list all installed brew packages without dependencies

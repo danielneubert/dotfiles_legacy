@@ -70,7 +70,7 @@ vim.keymap.set("n", "<C-6>", "<cmd>BufferGoto 6<cr>")
 vim.keymap.set("n", "<C-7>", "<cmd>BufferGoto 7<cr>")
 vim.keymap.set("n", "<C-8>", "<cmd>BufferGoto 8<cr>")
 vim.keymap.set("n", "<C-9>", "<cmd>BufferGoto 9<cr>")
-vim.keymap.set("n", "<C-w>", "<cmd>BufferClose<cr>")
+vim.keymap.set("n", "<C-w>", "<cmd>bd!<cr>")
 
 --------------------
 -- Plugin: NvimTree
