@@ -1,7 +1,8 @@
 local rosepine_ok, rosepine = pcall(require, "rose-pine")
 local github_ok, github = pcall(require, "github-theme")
+local tokyo_ok, tokyo = pcall(require, "tokyonight")
 
-if not rosepine_ok or not github_ok then
+if not rosepine_ok or not github_ok or not tokyo_ok then
 	return
 end
 
@@ -50,6 +51,32 @@ end
 
 --
 
+-- ==========
+-- Tokyo Moon
+-- ==========
+
+-- Tokyo
+function ColorTokyo()
+	tokyo.setup({
+		style = "moon",
+		styles = {
+			comments = { italic = true },
+			keywords = { italic = true },
+			functions = {},
+			variables = {},
+			sidebars = "dark",
+			floats = "dark",
+		},
+		sidebars = { "NvimTree", "help" },
+	})
+
+	vim.cmd.colorscheme("tokyonight")
+
+	print("Theme: Tokyo")
+end
+
+--
+
 -- ========
 -- Commands
 -- ========
@@ -65,5 +92,9 @@ vim.api.nvim_create_user_command("Sun", function()
 	ColorGitHub()
 end, {})
 
+vim.api.nvim_create_user_command("Tokyo", function()
+	ColorTokyo()
+end, {})
+
 -- Default Theme for start
-ColorRoseMoon()
+ColorTokyo()

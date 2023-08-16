@@ -17,7 +17,8 @@ config.colors = {
 }
 
 -- Change the colorscheme
-config.color_scheme = "Rosé Pine Moon (Gogh)"
+-- config.color_scheme = "Rosé Pine Moon (Gogh)"
+config.color_scheme = "Tokyo Night Moon"
 
 -- Make the window perfect
 config.enable_tab_bar = false
@@ -42,10 +43,10 @@ config.cursor_blink_ease_out = "Constant"
 -- This will enable to have the default zsh shell on the macos terminal for fallback cases
 config.default_prog = { "/opt/homebrew/bin/fish" }
 
--- -- Change the font to something workable
+-- Change the font to something workable
 config.font = wezterm.font("JetBrains Mono", { weight = "DemiBold" })
-config.font_size = 16
-config.line_height = 1.2
+config.font_size = 17
+config.line_height = 1.1
 
 -- Say that this macOS app works as a macOS app ...
 config.native_macos_fullscreen_mode = true
@@ -101,6 +102,7 @@ Keybind("CMD|CTRL", "f", wezterm.action.ToggleFullScreen)
 
 -- tmux bindings
 Keybind("CMD", "t", SendKey("CTRL", "F6"))
+Keybind("CMD", "n", SendKey("CTRL", "F6"))
 Keybind("CMD|SHIFT", "w", SendKey("CTRL", "F7"))
 Keybind("CMD", "h", SendKey("CTRL", "F8"))
 Keybind("CMD", "l", SendKey("CTRL", "F9"))
