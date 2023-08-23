@@ -27,12 +27,13 @@ vim.scriptencoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
 -- Search
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.smartcase = true
 
 -- Vim Is Awesome
+vim.opt.swapfile = false
 vim.opt.backspace = "indent,eol,start"
 
 -- Window Management

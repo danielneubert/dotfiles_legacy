@@ -37,8 +37,11 @@ vim.keymap.set("n", "<leader>rg", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/cgI<Left><Left
 -- enable <CMD-S> to save the file in iTerm via <C-w>
 vim.keymap.set({ "n", "v" }, "<C-s>", function()
 	vim.lsp.buf.format()
-	vim.cmd("w")
+	vim.cmd("w!")
 end)
+
+-- Binding for <CMD-A> to select all in visual mode
+vim.keymap.set({ "n", "v" }, "<C-g>", "ggVG", { noremap = true, silent = true })
 
 -- enable <CMD-C> to copy the selection to the system clipboard via wezterm
 vim.keymap.set("v", "<C-c>", '"*y') -- split vertical

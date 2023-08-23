@@ -45,8 +45,8 @@ config.default_prog = { "/opt/homebrew/bin/fish" }
 
 -- Change the font to something workable
 config.font = wezterm.font("JetBrains Mono", { weight = "DemiBold" })
-config.font_size = 17
-config.line_height = 1.1
+config.font_size = 15
+config.line_height = 1.0
 
 -- Say that this macOS app works as a macOS app ...
 config.native_macos_fullscreen_mode = true
@@ -104,8 +104,8 @@ Keybind("CMD|CTRL", "f", wezterm.action.ToggleFullScreen)
 Keybind("CMD", "t", SendKey("CTRL", "F6"))
 Keybind("CMD", "n", SendKey("CTRL", "F6"))
 Keybind("CMD|SHIFT", "w", SendKey("CTRL", "F7"))
-Keybind("CMD", "h", SendKey("CTRL", "F8"))
-Keybind("CMD", "l", SendKey("CTRL", "F9"))
+Keybind("CMD", "j", SendKey("CTRL", "F8"))
+Keybind("CMD", "k", SendKey("CTRL", "F9"))
 Keybind("CMD", "1", SendKey("CTRL", "F1"))
 Keybind("CMD", "2", SendKey("CTRL", "F2"))
 Keybind("CMD", "3", SendKey("CTRL", "F3"))
@@ -113,8 +113,10 @@ Keybind("CMD", "4", SendKey("CTRL", "F4"))
 Keybind("CMD", "5", SendKey("CTRL", "F5"))
 
 -- vim bindings
+Keybind("CMD", "a", SendKey("CTRL", "g")) -- visual mode select all
 Keybind("CMD", "e", SendKey("CTRL", "e")) -- open file explorer
 Keybind("CMD", "f", SendKey("CTRL", "p")) -- find file
+Keybind("CMD", "l", SendKey("CTRL", "p")) -- find file
 Keybind("CMD", "s", SendKey("CTRL", "s")) -- save file
 Keybind("CMD|SHIFT", "f", SendKey("CTRL", "f")) -- find filecontent
 Keybind("CMD|SHIFT", "c", SendKey("CTRL", "c")) -- copy vim selection to system clipboard
