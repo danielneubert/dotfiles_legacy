@@ -9,6 +9,23 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+function get_appearance()
+	if wezterm.gui then
+		return wezterm.gui.get_appearance()
+	end
+	return "Dark"
+end
+
+function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "Rosé Pine (Gogh)"
+		-- return "Catppuccin Macchiato"
+	else
+		return "Rosé Pine (Gogh)"
+		-- return "Rosé Pine Dawn (Gogh)"
+	end
+end
+
 -- Changing the cursor to something you'll see everywhere
 config.colors = {
 	cursor_bg = "#F00045",
@@ -16,16 +33,12 @@ config.colors = {
 	cursor_border = "#F00045",
 }
 
--- Change the colorscheme
--- config.color_scheme = "Rosé Pine Moon (Gogh)"
-config.color_scheme = "Tokyo Night Moon"
+-- Color scheme based on macOS appearance
+config.color_scheme = scheme_for_appearance(get_appearance())
 
 -- Make the window perfect
 config.enable_tab_bar = false
 config.window_decorations = "TITLE | RESIZE"
--- config.window_decorations = "RESIZE"
-config.window_background_opacity = 1
-config.macos_window_background_blur = 64
 config.exit_behavior = "CloseOnCleanExit"
 config.window_padding = {
 	left = 0,
@@ -34,21 +47,42 @@ config.window_padding = {
 	bottom = 0,
 }
 
-config.default_cursor_style = "BlinkingBlock"
-config.cursor_blink_rate = 300
+config.cursor_blink_rate = 150
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
+config.default_cursor_style = "BlinkingBlock"
 
 -- Run the fish shell by default
 -- This will enable to have the default zsh shell on the macos terminal for fallback cases
 config.default_prog = { "/opt/homebrew/bin/fish" }
 
--- Change the font to something workable
-config.font = wezterm.font("JetBrains Mono", { weight = "DemiBold" })
-config.font_size = 15
-config.line_height = 1.0
+config.font_size = 16
+config.line_height = 1.35
+config.font = wezterm.font("Monaspace Neon")
+config.font_rules = {
+	{
+		intensity = "Bold",
+		italic = false,
+		font = wezterm.font("Monaspace Neon", { weight = "Medium" }),
+	},
+	{
+		intensity = "Bold",
+		italic = true,
+		font = wezterm.font("Monaspace Radon", { weight = "Medium", italic = false }),
+	},
+	{
+		intensity = "Normal",
+		italic = false,
+		font = wezterm.font("Monaspace Neon", { weight = "Medium", italic = false }),
+	},
+	{
+		intensity = "Normal",
+		italic = true,
+		font = wezterm.font("Monaspace Radon", { weight = "Medium", italic = false }),
+	},
+}
 
--- Say that this macOS app works as a macOS app ...
+-- say that this macOS app works as a macOS app ...
 config.native_macos_fullscreen_mode = true
 
 -- start the macos screensaver and lockscreen via the shortcuts app
@@ -57,7 +91,7 @@ function StartLockscreen()
 		wezterm.background_child_process({
 			"shortcuts",
 			"run",
-			"Bildschirmschoner ein",
+			"Bildschirmschoner ein", -- DE: Screensaver on
 		})
 	end)
 end
@@ -89,6 +123,7 @@ end
 Keybind("CMD", "h", DisableKey())
 Keybind("CMD", "m", DisableKey())
 Keybind("CMD", "w", DisableKey())
+Keybind("CMD", "q", DisableKey())
 Keybind("CTRL", "n", DisableKey())
 Keybind("CTRL", "w", DisableKey())
 Keybind("CTRL|SHIFT", "j", DisableKey())
@@ -97,12 +132,12 @@ Keybind("CTRL|SHIFT", "k", DisableKey())
 -- system bindings
 Keybind("CMD", "F3", StartLockscreen())
 Keybind("CMD", "F16", StartLockscreen())
-Keybind("CMD", "q", wezterm.action.CloseCurrentTab({ confirm = true }))
 Keybind("CMD|CTRL", "f", wezterm.action.ToggleFullScreen)
 
 -- tmux bindings
 Keybind("CMD", "t", SendKey("CTRL", "F6"))
 Keybind("CMD", "n", SendKey("CTRL", "F6"))
+Keybind("CMD|SHIFT", "q", SendKey("CTRL", "F7"))
 Keybind("CMD|SHIFT", "w", SendKey("CTRL", "F7"))
 Keybind("CMD", "j", SendKey("CTRL", "F8"))
 Keybind("CMD", "k", SendKey("CTRL", "F9"))

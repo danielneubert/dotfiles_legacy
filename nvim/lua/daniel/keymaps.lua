@@ -4,6 +4,10 @@ vim.g.mapleader = " "
 -- Handy Helpers
 --------------------
 
+-- life-saver: remap non-braking space to space in insert mode
+-- almost a requirement for nordic keyboards, where you write [] and {} with [OPTION]-key
+vim.api.nvim_set_keymap("i", " ", "<Space>", { noremap = true })
+
 -- indent in normal mode without double-press
 vim.keymap.set("n", "<", "<<", { noremap = true, silent = true })
 vim.keymap.set("n", ">", ">>", { noremap = true, silent = true })
@@ -38,6 +42,11 @@ vim.keymap.set("n", "<leader>rg", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/cgI<Left><Left
 vim.keymap.set({ "n", "v" }, "<C-s>", function()
 	vim.lsp.buf.format()
 	vim.cmd("w!")
+end)
+
+-- enable <CMD-S> to save the file in iTerm via <C-w>
+vim.keymap.set({ "n", "v" }, "<leader>ll", function()
+	vim.lsp.buf.format()
 end)
 
 -- Binding for <CMD-A> to select all in visual mode

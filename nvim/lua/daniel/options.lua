@@ -1,8 +1,8 @@
 -- Cursor
 vim.opt.scrolloff = 8
 vim.opt.guicursor = ""
-vim.opt.cursorline = true
-vim.opt.colorcolumn = "100"
+vim.opt.cursorline = false
+vim.opt.colorcolumn = "80"
 
 -- Window Title
 vim.opt.title = true
@@ -10,7 +10,7 @@ vim.opt.titlestring = "vim %{substitute(getcwd(), $HOME, '~', '')}"
 
 -- Numbers
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- Indentation
 vim.opt.tabstop = 4
@@ -43,11 +43,14 @@ vim.opt.splitright = true
 -- Color Setup
 vim.opt.termguicolors = true
 
+-- Color Setup
+vim.opt.foldenable = false
+
 -- PHP word seperation to select $this
 vim.opt.iskeyword:append("$")
 
 -- Highlight invisible chars
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars:append("space:⋅")
 
 -- Disable BarBar Auto Setup (don't ask me why)

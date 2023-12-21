@@ -7,6 +7,13 @@ null_ls.setup({
 		formatting.prettier,
 		formatting.phpcsfixer.with({ -- Change how the php linting will work
 			prefer_local = "vendor/bin",
+			args = {
+				"--no-interaction",
+				"--using-cache=no",
+				"--quiet",
+				"fix",
+				"SFILENAME",
+			},
 		}),
 		formatting.stylua,
 	},

@@ -3,25 +3,23 @@
 
 # but not these files...
 !.gitignore
-!.zshrc
 !LICENCE
 !README.md
 
 # ...and these ...
-!.config/
-!.config/starship.toml
-!.config/fish
-!.config/fish/**
-!.config/nvim
-!.config/nvim/**
-!.config/wezterm
-!.config/wezterm/**
-!.config/karabiner
-!.config/karabiner/assets
-!.config/karabiner/assets/complex_modifications
-!.config/karabiner/assets/complex_modifications/**
-!.setup
-.setup/**
+!starship.toml
+!fish
+!fish/**
+!nvim
+!nvim/**
+!tmux
+!tmux/**
+!wezterm
+!wezterm/**
+!karabiner
+!karabiner/assets
+!karabiner/assets/complex_modifications
+!karabiner/assets/complex_modifications/**
 
 **/.DS_Store
 !**/**/.gitkeep

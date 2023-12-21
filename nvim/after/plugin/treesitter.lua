@@ -4,9 +4,27 @@ if not treesitter_ok then
 	return
 end
 
+parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
+
+vim.filetype.add({
+	pattern = {
+		[".*%.blade%.php"] = "blade",
+	},
+})
+
+parser_configs.blade = {
+	install_info = {
+		url = "https://github.com/EmranMR/tree-sitter-blade",
+		files = { "src/parser.c" },
+		branch = "main",
+	},
+	filetype = "blade",
+}
+
 treesitter.setup({
 	ensure_installed = {
 		"bash",
+		"blade",
 		"c",
 		"cpp",
 		"css",
@@ -25,6 +43,9 @@ treesitter.setup({
 		"typescript",
 		"vim",
 		"yaml",
+	},
+	ignore_install = {
+		"help",
 	},
 	sync_install = false,
 	auto_install = true,

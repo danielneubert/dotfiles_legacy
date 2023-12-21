@@ -11,6 +11,8 @@ return require("packer").startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "folke/tokyonight.nvim", as = "tokyonight" })
 	use({ "projekt0n/github-nvim-theme", as = "github-theme" })
+	use({ "craftzdog/solarized-osaka.nvim" })
+	use({ "cormacrelf/dark-notify" })
 
 	-- required for most plugins
 	use({ "nvim-lua/plenary.nvim" })
@@ -57,9 +59,9 @@ return require("packer").startup(function(use)
 	-- copilot ftw
 	use({ "zbirenbaum/copilot.lua" })
 
-	-- terminal
-	use({ "akinsho/toggleterm.nvim", tag = "*" })
-
 	-- Something new to play with
 	use({ "romgrk/barbar.nvim" })
+
+	-- Something new to play with
+	use({ "lewis6991/gitsigns.nvim" })
 end)

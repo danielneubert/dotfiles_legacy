@@ -1,10 +1,13 @@
 # Create the `la` alias for a more readable `ls`
 alias la='lsd -l -A --tree --depth 1 --date relative --group-dirs first --icon never --blocks "name,size,date"'
+alias vim='nvim'
 
 # After changing the directory use the `la` alias to display its contents
 function l --on-variable PWD
     la
 end
+
+set -U fish_user_paths /usr/local/bin /opt/homebrew/bin $HOME/.composer/vendor/bin $fisher_user_paths
 
 # Make the .config accessible everywhere
 alias ..config='cd ~/.config && vim && cd ~'
